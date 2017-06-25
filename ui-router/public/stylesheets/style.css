@@ -1,0 +1,54 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration:unset;
+}
+
+ul {
+	padding-top: 0;
+	margin-left: -200px;
+}
+
+li {
+	list-style-type: none;
+}
+button {
+	margin-bottom: 2px;
+	width: 120px;
+	height: 40px;
+	border: 0px;
+	font-size: 15px;
+}
+.success {
+	background-color: green;
+}
+button.d:hover {
+	opacity: 0.7;
+	transform: translate(95px);			
+	transition: 1s;
+}
+.danger {
+	background-color: red;
+}
+.warning {
+	background-color: orange;
+}
+.info {
+	background-color: blue;
+}
+.default {
+	background-color: gray;
+	color: black;
+}
+
+.layout {
+	display: inline-block;
+}
+
+ul li:hover {
+	background-color: #faffbd;
+}

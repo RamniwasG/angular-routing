@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>creating a routing using ui-router library</title>
+	
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="public/stylesheets/style.css">
+
+  	<script src="bower_components/jquery/dist/jquery.min.js"></script>  	
+  	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  	<script src="bower_components/angular/angular.min.js"></script>
+  	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+  	<!-- <script src="public/templates/routes.js"></script> -->	
+  	
+  	<script src="public/routerController.js"></script>
+  	<script src="public/templates/successController.js"></script>
+  	<script src="public/templates/dangerController.js"></script>
+  	<script src="public/templates/defaultController.js"></script>
+  	<script src="public/templates/infoController.js"></script>
+  	<script src="public/templates/warningController.js"></script>
+
+<body>
+	<div ng-app="myApp" class="container">
+		<div class="jumbotron" style="text-align:center">
+			<!-- <h1>ui-router App</h1> -->
+			<h1>Bootstrap Tutorial</h1>
+		</div>
+
+		<div class="row" ng-controller="routCtrl as vm">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-1">
+				<ul class="list-group">
+					<li class="list-group-item" ui-sref="{{item.route}}" 
+						ng-repeat="item in vm.listItems">
+						{{item.text}}
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-7 well" ui-view style="min-height:400px">
+				<h2 style="text-align:center">no content</h2>
+			</div>
+			<div class="col-sm-1"></div>
+	</div>
+	<!-- <script src="public/success.js"></script> -->
+</body>
+</html>
+
